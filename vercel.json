@@ -1,0 +1,33 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "./index.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/products",
+        "dest": "/index.js"
+      },
+      {
+        "src": "/api/purchase",
+        "dest": "/index.js"
+      },
+      {
+        "src": "/api/purchase/:id",
+        "dest": "/index.js"
+      },
+      {
+        "src": "/api/purchase/:email",
+        "dest": "/index.js"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/index.js",
+        "methods": ["GET", "POST", "PUT", "DELETE"]
+      }
+    ]
+  }
+  
