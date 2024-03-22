@@ -77,6 +77,9 @@ run().catch(console.dir);
 app.get('/',(req,res)=>{
     res.send('Plant server running ooooooooooo')
 })
+app.get('/test',(req,res)=>{
+    res.send('test api calling')
+})
 
 app.listen(port,()=>{
     console.log(`server is running on port ${port}`)
